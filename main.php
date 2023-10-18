@@ -7,7 +7,6 @@
     <title>Bilderfritteuse</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Benutzerdefiniertes CSS, um den Button rot zu färben und zu zentrieren */
         .center-button {
             text-align: center;
         }
@@ -26,18 +25,20 @@
                 <br>
                 <h1 class="text-center">Bilderfritteuse</h1>
                 <br>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Hochladen</span>
+                <form action="fry.php" method="post" enctype="multipart/form-data">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Hochladen</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="uploaded_image" id="inputGroupFile01">
+                            <label class="custom-file-label" for="inputGroupFile01">Wähle ein Bild aus, das du fritieren möchtest!</label>
+                        </div>
                     </div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile01">
-                        <label class="custom-file-label" for="inputGroupFile01">Wähle ein Bild aus, dass du fritieren willst!</label>
+                    <div class="mt-3 center-button">
+                        <button type="submit" class="btn red-button"><b>Frittieren!</b></button>
                     </div>
-                </div>
-                <div class="mt-3 center-button">
-                    <a href="fry.php" class="btn red-button"><b>Frittieren!</b></a>
-                </div>
+                </form>
             </div>
         </div>
     </div>
