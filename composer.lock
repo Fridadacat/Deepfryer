@@ -1,0 +1,71 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8d9f694335dcb8fce0ab84c9593b9acf",
+    "packages": [
+        {
+            "name": "mirazmac/php-deep-fry",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MirazMac/php-deep-fry.git",
+                "reference": "2fbabce469c6023a7cdf7cfec736602dd3ae5db0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MirazMac/php-deep-fry/zipball/2fbabce469c6023a7cdf7cfec736602dd3ae5db0",
+                "reference": "2fbabce469c6023a7cdf7cfec736602dd3ae5db0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MirazMac\\DeepFry\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miraz Mac",
+                    "email": "mirazmac@gmail.com",
+                    "homepage": "https://mirazmac.info",
+                    "role": "Original Author"
+                }
+            ],
+            "description": "A Deep Fryer written in PHP to cook some smokin' hot memes!",
+            "homepage": "https://github.com/mirazmac/php-deep-fry",
+            "keywords": [
+                "deep fry",
+                "deep fryer",
+                "image fryer",
+                "image processing",
+                "meme",
+                "meme fryer"
+            ],
+            "support": {
+                "issues": "https://github.com/MirazMac/php-deep-fry/issues",
+                "source": "https://github.com/MirazMac/php-deep-fry/tree/master"
+            },
+            "time": "2018-11-06T09:58:02+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}

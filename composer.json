@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mirazmac/php-deep-fry": "^1.0"
+    }
+}
