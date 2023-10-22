@@ -9,14 +9,24 @@
     <style>
         .center-image {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 80vh;
+            position: relative;
         }
 
         .responsive-image {
             max-width: 100%;
             max-height: 100%;
+        }
+
+        .quality-slider {
+            width: 100%;
+            max-width: 500px; /* You can adjust the width as needed */
+            position: relative;
+            bottom: 0;
+            text-align: center;
         }
     </style>
 </head>
@@ -29,7 +39,7 @@
                 require 'C:/xampp/htdocs/vendor/autoload.php';
 
                 if (isset($_FILES['uploaded_image'])) {
-                    $upload_dir = 'C:/xampp/htdocs/'; 
+                    $upload_dir = 'C:/xampp/htdocs/';
 
                     $file_name = $_FILES['uploaded_image']['name'];
                     $file_path = $upload_dir . $file_name;
@@ -41,8 +51,37 @@
                             ->quality(20)
                             ->save();
 
-                        $improved_file_path = 'http://localhost/'.pathinfo($file_name, PATHINFO_FILENAME).'_deepfried.jpg';
+                        $improved_file_path = 'http://localhost/' . pathinfo($file_name, PATHINFO_FILENAME) . '_deepfried.jpg';
                         echo "<img src='$improved_file_path' alt='Frittiertes Bild' class='responsive-image'>";
+
+                        echo '<div class="quality-slider">';
+                        echo "<h2>Qualität:</h2>";
+                        echo '<input type="range" id="qualitySlider" min="1" max="100" value="20">';
+                        echo '<span id="qualityValue">20</span>';
+                        echo '</div>';
+
+                        echo "<script>
+                            var qualitySlider = document.getElementById('qualitySlider');
+                            var qualityValue = document.getElementById('qualityValue');
+                            qualitySlider.oninput = function() {
+                                qualityValue.innerHTML = this.value;
+                            };
+                            qualitySlider.onchange = function() {
+                                var quality = this.value;
+                                var image = new Image();
+                                image.src = '$improved_file_path';
+                                image.onload = function() {
+                                    var canvas = document.createElement('canvas');
+                                    var ctx = canvas.getContext('2d');
+                                    canvas.width = image.width;
+                                    canvas.height = image.height;
+                                    ctx.drawImage(image, 0, 0);
+                                    var dataUrl = canvas.toDataURL('image/jpeg', quality / 100);
+                                    var imgElement = document.querySelector('.responsive-image');
+                                    imgElement.src = dataUrl;
+                                };
+                            };
+                        </script>";
                     } else {
                         echo "Fehler beim Hochladen des Bildes.";
                     }
