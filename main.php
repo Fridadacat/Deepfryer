@@ -39,7 +39,7 @@
                         <button type="submit" class="btn red-button"><b>Frittieren!</b></button>
                     </div>
                     <div style="position: fixed; bottom: 10px; right: 10px;">
-                        <a href="gallery.php">Galerie...</a>
+                        <a href="galery.php">Galerie...</a>
                     </div>
                 </form>
             </div>
