@@ -31,18 +31,30 @@
                             <span class="input-group-text">Hochladen</span>
                         </div>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="uploaded_image" id="inputGroupFile01">
-                            <label class="custom-file-label" for="inputGroupFile01">Wähle ein Bild aus, das du fritieren möchtest!</label>
+                            <input type="file" class="custom-file-input" name="uploaded_image" id="inputGroupFile01" onchange="updateFileName()">
+                            <label class="custom-file-label" for="inputGroupFile01" id="fileLabel">Wähle ein Bild aus, das du fritieren möchtest!</label>
                         </div>
                     </div>
                     <div class="mt-3 center-button">
                         <button type="submit" class="btn red-button"><b>Frittieren!</b></button>
+                    </div>
+                    <div style="position: fixed; bottom: 10px; right: 10px;">
+                        <a href="gallery.php">Galerie...</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function updateFileName() {
+            const input = document.getElementById("inputGroupFile01");
+            const label = document.getElementById("fileLabel");
+            const fileName = input.files[0] ? input.files[0].name : "Wähle ein Bild aus, das du fritieren möchtest!";
+            label.innerText = fileName;
+        }
+    </script>
 </body>
 
 </html>
