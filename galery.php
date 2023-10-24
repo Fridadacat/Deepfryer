@@ -12,6 +12,11 @@
             margin: 0 auto;
             max-width: 100%;
         }
+        #imageCarousel img {
+            max-width: 100%;
+            max-height: 80vh; /* Adjust the value as needed */
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -49,7 +54,7 @@
                 <span class="sr-only">Zurück</span>
             </a>
             <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon" ariahidden="true"></span>
                 <span class="sr-only">Weiter</span>
             </a>
         </div>
