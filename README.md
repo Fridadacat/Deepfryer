@@ -1,3 +1,4 @@
+# Deepfryer
 Entpacke alle dateien in deinen htdocs folder und passe den dateipfad in fry.php an
  
 
@@ -16,4 +17,4 @@ geben sie nun folgende 2 commands ein:
 cd C:\xampp\htdocs
 composer require mirazmac/php-deep-fry
 
-Die library sollte nun eingebunden sein. Öffnen sie nun http://localhost/main.php in ihrem browser.
+Die library sollte nun eingebunden sein. Öffnen sie nun http://localhost/main.php in ihrem browser. Testen sie den Fryer mit dem meme.jpg im htdocs folder
