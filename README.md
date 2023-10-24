@@ -1,20 +1,21 @@
 # Deepfryer
-Entpacke alle dateien in deinen htdocs folder und passe den dateipfad in fry.php an
+Entpacken Sie alle Dateien in ihren Htdocs-Folder und passen Sie den Dateipfad in fry.php an.
  
 
-Installieren sie XAMPP: https://www.apachefriends.org/de/download.html
-Klicken sie in der Sparte "Apache" auf config und wählen sie php.ini
-Suchen sie nach "gd" und ändern sie ";extension=gd" zu "extension=gd"
+Installieren sie XAMPP als Windowsuser: https://www.apachefriends.org/de/download.html
+Platzieren sie den Htdocs-Folder unter "C:/xampp/".
+Klicken sie in der Sparte "Apache" auf "config" und wählen sie "php.ini".
+Suchen sie nach "gd" und ändern sie ";extension=gd" zu "extension=gd".
 
 
 Installieren sie COMPOSER: https://getcomposer.org/download/
-Composer benötigt 7zip und git um zu funktionieren. Wenn sie dies noch nicht heruntergeladen haben, können sie dies hier:
+Composer benötigt 7zip um zu funktionieren. Wenn Sie dies noch nicht heruntergeladen haben, können Sie dies hier tun:
 https://www.7-zip.org/download.html
 
-öffnen sie ihr cmd. und schauen sie, dass sie ihren htdocs folder unter C:/xampp/htdocs haben.
-geben sie nun folgende 2 commands ein:
+Öffnen Sie ihr cmd und schauen Sie, dass Sie ihren Htdocs-Folder unter C:/xampp/htdocs haben.
+Geben sie nun folgende 2 Commands ein:
 
 cd C:\xampp\htdocs
 composer require mirazmac/php-deep-fry
 
-Die library sollte nun eingebunden sein. Öffnen sie nun http://localhost/main.php in ihrem browser. Testen sie den Fryer mit dem meme.jpg im htdocs folder
+Die library sollte nun eingebunden sein. Öffnen Sie nun http://localhost/main.php in ihrem browser. Testen Sie den Fryer mit dem meme.jpg im htdocs folder
