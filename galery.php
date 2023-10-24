@@ -54,7 +54,7 @@
                 <span class="sr-only">Zurück</span>
             </a>
             <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" ariahidden="true"></span>
+                <span class="carousel-control-next-icon"></span>
                 <span class="sr-only">Weiter</span>
             </a>
         </div>
